@@ -24,6 +24,9 @@ public class HomeAboutImpl implements HomeAbout{
     @Inject
     String buttonTitle;
 
+    @Inject
+    String img;
+
     @Override
     public String getHomeAboutTitle() {
         return title;
@@ -42,5 +45,10 @@ public class HomeAboutImpl implements HomeAbout{
     @Override
     public String getHomeAboutButtonTitle() {
         return buttonTitle;
+    }
+
+    @Override
+    public String getImg() {
+        return img;
     }
 }

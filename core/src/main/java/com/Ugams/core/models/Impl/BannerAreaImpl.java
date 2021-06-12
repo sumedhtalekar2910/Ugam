@@ -24,23 +24,31 @@ public class BannerAreaImpl implements BannerArea{
     @Inject
     String buttonTitle;
 
+    @Inject
+    String img;
+
     @Override
     public String getBannerAreaTitle() {
-        return null;
+        return title;
     }
 
     @Override
     public String getBannerAreaHeading() {
-        return null;
+        return heading;
     }
 
     @Override
     public String getBannerAreaDescription() {
-        return null;
+        return desc;
     }
 
     @Override
     public String getBannerAreaButtonTitle() {
-        return null;
+        return buttonTitle;
+    }
+
+    @Override
+    public String getImg() {
+        return img;
     }
 }

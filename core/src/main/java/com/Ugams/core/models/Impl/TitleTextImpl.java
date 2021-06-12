@@ -1,8 +1,7 @@
 package com.Ugams.core.models.Impl;
 
 
-
-import com.Ugams.core.models.Blog;
+import com.Ugams.core.models.TitleText;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.DefaultInjectionStrategy;
 import org.apache.sling.models.annotations.Model;
@@ -10,31 +9,23 @@ import org.apache.sling.models.annotations.Model;
 import javax.inject.Inject;
 
 @Model(adaptables = Resource.class,
-        adapters = Blog.class,
+        adapters = TitleText.class,
         defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
-public class BlogImpl implements Blog{
+public class TitleTextImpl implements TitleText{
 
     @Inject
-    String blogTitle;
+    String title;
 
     @Inject
-    String blogText;
-
-    @Inject
-    String img;
+    String text;
 
     @Override
-    public String getBlogTitle() {
-        return blogTitle;
+    public String getTitle() {
+        return title;
     }
 
     @Override
-    public String getBlogText() {
-        return blogText;
-    }
-
-    @Override
-    public String getImg() {
-        return img;
+    public String getText() {
+        return text;
     }
 }

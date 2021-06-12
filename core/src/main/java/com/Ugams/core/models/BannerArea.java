@@ -5,4 +5,5 @@ public interface BannerArea {
     String getBannerAreaHeading();
     String getBannerAreaDescription();
     String getBannerAreaButtonTitle();
+    String getImg();
 }

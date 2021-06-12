@@ -6,4 +6,5 @@ public interface HomeAbout {
     String getHomeAboutHeading();
     String getHomeAboutDescription();
     String getHomeAboutButtonTitle();
+    String getImg();
 }

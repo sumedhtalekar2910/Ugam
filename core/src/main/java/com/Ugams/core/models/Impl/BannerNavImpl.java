@@ -1,8 +1,6 @@
 package com.Ugams.core.models.Impl;
 
-
-
-import com.Ugams.core.models.Blog;
+import com.Ugams.core.models.BannerNav;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.DefaultInjectionStrategy;
 import org.apache.sling.models.annotations.Model;
@@ -10,31 +8,31 @@ import org.apache.sling.models.annotations.Model;
 import javax.inject.Inject;
 
 @Model(adaptables = Resource.class,
-        adapters = Blog.class,
+        adapters = BannerNav.class,
         defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
-public class BlogImpl implements Blog{
+public class BannerNavImpl implements BannerNav{
 
     @Inject
-    String blogTitle;
+    String title;
 
     @Inject
-    String blogText;
+    String nav1;
 
     @Inject
-    String img;
+    String nav2;
 
     @Override
-    public String getBlogTitle() {
-        return blogTitle;
+    public String getTitle() {
+        return title;
     }
 
     @Override
-    public String getBlogText() {
-        return blogText;
+    public String getNav1() {
+        return nav1;
     }
 
     @Override
-    public String getImg() {
-        return img;
+    public String getNav2() {
+        return nav2;
     }
 }
