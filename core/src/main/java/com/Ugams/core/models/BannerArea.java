@@ -6,4 +6,5 @@ public interface BannerArea {
     String getBannerAreaDescription();
     String getBannerAreaButtonTitle();
     String getImg();
+    String getPathValue();
 }

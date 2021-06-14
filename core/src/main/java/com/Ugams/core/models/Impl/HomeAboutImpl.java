@@ -27,6 +27,9 @@ public class HomeAboutImpl implements HomeAbout{
     @Inject
     String img;
 
+    @Inject
+    String path;
+
     @Override
     public String getHomeAboutTitle() {
         return title;
@@ -50,5 +53,10 @@ public class HomeAboutImpl implements HomeAbout{
     @Override
     public String getImg() {
         return img;
+    }
+
+    @Override
+    public String getPathValue() {
+        return path;
     }
 }
