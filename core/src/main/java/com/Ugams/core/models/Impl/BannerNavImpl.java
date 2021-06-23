@@ -21,6 +21,12 @@ public class BannerNavImpl implements BannerNav{
     @Inject
     String nav2;
 
+    @Inject
+    String nav1Path;
+
+    @Inject
+    String nav2Path;
+
     @Override
     public String getTitle() {
         return title;
@@ -34,5 +40,15 @@ public class BannerNavImpl implements BannerNav{
     @Override
     public String getNav2() {
         return nav2;
+    }
+
+    @Override
+    public String getNav1Path() {
+        return nav1Path;
+    }
+
+    @Override
+    public String getNav2Path() {
+        return nav2Path;
     }
 }
