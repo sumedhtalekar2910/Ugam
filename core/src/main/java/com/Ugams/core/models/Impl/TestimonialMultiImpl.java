@@ -15,6 +15,8 @@ import java.util.Map;
 @Model(adaptables = Resource.class,
         adapters = TestimonialMulti.class,
         defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
+
+
 public class TestimonialMultiImpl implements TestimonialMulti{
 
     @ChildResource

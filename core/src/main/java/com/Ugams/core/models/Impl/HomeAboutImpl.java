@@ -1,16 +1,28 @@
 package com.Ugams.core.models.Impl;
 
 import com.Ugams.core.models.HomeAbout;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonRootName;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.DefaultInjectionStrategy;
+import org.apache.sling.models.annotations.Exporter;
+import org.apache.sling.models.annotations.ExporterOption;
 import org.apache.sling.models.annotations.Model;
 
 import javax.inject.Inject;
 
 @Model(adaptables = Resource.class,
         adapters = HomeAbout.class,
+        resourceType = HomeAboutImpl.RESOURCE_TYPE,
         defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
+@Exporter(name = "jackson", extensions ="json",selector = "homeabout",
+        options = {
+                @ExporterOption(name = "SerializationFeature.WRAP_ROOT_VALUE", value="true"),
+        })
+@JsonRootName("Home-About")
 public class HomeAboutImpl implements HomeAbout{
+
+    final protected static String RESOURCE_TYPE="ugams/components/content/home-about";
 
     @Inject
     String title;
@@ -40,6 +52,7 @@ public class HomeAboutImpl implements HomeAbout{
         return heading;
     }
 
+    @JsonProperty(value = "Description")
     @Override
     public String getHomeAboutDescription() {
         return desc;
@@ -50,6 +63,7 @@ public class HomeAboutImpl implements HomeAbout{
         return buttonTitle;
     }
 
+    @JsonProperty(value = "Image Path")
     @Override
     public String getImg() {
         return img;
@@ -58,5 +72,10 @@ public class HomeAboutImpl implements HomeAbout{
     @Override
     public String getPathValue() {
         return path;
+    }
+
+    @JsonProperty(value = "Component Name")
+    public String ComponentName(){
+        return "Home About";
     }
 }
