@@ -1,4 +1,4 @@
-package com.Ugams.core.models.Impl;
+package com.Ugams.core.models.impl;
 
 
 
