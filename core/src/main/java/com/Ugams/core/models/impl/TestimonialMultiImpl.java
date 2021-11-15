@@ -1,4 +1,4 @@
-package com.Ugams.core.models.Impl;
+package com.Ugams.core.models.impl;
 
 
 import com.Ugams.core.models.TestimonialMulti;
@@ -15,6 +15,8 @@ import java.util.Map;
 @Model(adaptables = Resource.class,
         adapters = TestimonialMulti.class,
         defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
+
+
 public class TestimonialMultiImpl implements TestimonialMulti{
 
     @ChildResource

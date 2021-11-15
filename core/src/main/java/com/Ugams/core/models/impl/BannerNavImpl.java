@@ -1,4 +1,4 @@
-package com.Ugams.core.models.Impl;
+package com.Ugams.core.models.impl;
 
 import com.Ugams.core.models.BannerNav;
 import org.apache.sling.api.resource.Resource;

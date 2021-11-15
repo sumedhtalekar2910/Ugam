@@ -1,4 +1,4 @@
-package com.Ugams.core.models.Impl;
+package com.Ugams.core.models.impl;
 
 
 import com.Ugams.core.models.Price;
@@ -10,8 +10,11 @@ import javax.inject.Inject;
 
 @Model(adaptables = Resource.class,
         adapters = Price.class,
+        resourceType = PriceImpl.RESOURCE_TYPE,
         defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
 public class PriceImpl implements Price{
+
+    final protected static String RESOURCE_TYPE="ugams/components/content/price";
 
     @Inject
     String type;
