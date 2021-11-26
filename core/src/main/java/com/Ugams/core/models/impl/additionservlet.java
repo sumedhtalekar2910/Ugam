@@ -15,6 +15,8 @@ import java.io.IOException;
 )
 public class additionservlet extends SlingAllMethodsServlet {
 
+
+
     @Override
     protected void doGet(final SlingHttpServletRequest req, final SlingHttpServletResponse resp) throws IOException {
         int num1 = Integer.parseInt(req.getParameter("num1"));
