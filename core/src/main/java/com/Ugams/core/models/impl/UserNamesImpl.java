@@ -1,5 +1,4 @@
 package com.Ugams.core.models.impl;
-
 import com.Ugams.core.models.UserNames;
 import com.Ugams.core.services.UsernameService;
 import com.Ugams.core.utils.ResolverUtils;
@@ -35,8 +34,7 @@ public class UserNamesImpl implements UserNames {
 
     final Logger LOG = LoggerFactory.getLogger(UserNamesImpl.class);
 
-    @Inject
-    ResourceResolver resolver;
+    
     @Inject
     QueryBuilder queryBuilder;
 
@@ -66,9 +64,9 @@ public class UserNamesImpl implements UserNames {
         userMap.put("p.properties", "rep:principalName");
         try{
             LOG.info("\n Inside Try..");
-            //ResourceResolver serviceResourceResolver = ResolverUtils.newResolver(resourceResolverFactory);
+            ResourceResolver serviceResourceResolver = ResolverUtils.newResolver(resourceResolverFactory);
             //LOG.info("\n resolver hit "+serviceResourceResolver.getUserID());
-            Session session = resolver.adaptTo(Session.class);
+            Session session = serviceResourceResolver.adaptTo(Session.class);
             LOG.info("\n Result "+session.getUserID());
             Query userQuery = queryBuilder.createQuery(PredicateGroup.create(userMap), session);
             SearchResult result = userQuery.getResult();
@@ -78,7 +76,10 @@ public class UserNamesImpl implements UserNames {
             }
         } catch (RepositoryException e) {
             LOG.info("Service User ERROR",e.getMessage());
+        } catch (LoginException e) {
+            e.printStackTrace();
         }
         return user;
     }
 }
+
