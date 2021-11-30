@@ -65,9 +65,7 @@ public class UserNamesImpl implements UserNames {
         userMap.put("type", "rep:User");
         userMap.put("p.properties", "rep:principalName");
         try{
-            LOG.info("\n Inside Try..");
-            //ResourceResolver serviceResourceResolver = ResolverUtils.newResolver(resourceResolverFactory);
-            //LOG.info("\n resolver hit "+serviceResourceResolver.getUserID());
+            ResourceResolver serviceResourceResolver = ResolverUtils.newResolver(resourceResolverFactory);
             Session session = resolver.adaptTo(Session.class);
             LOG.info("\n Result "+session.getUserID());
             Query userQuery = queryBuilder.createQuery(PredicateGroup.create(userMap), session);
