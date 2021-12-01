@@ -12,7 +12,7 @@ public class ResolverUtils {
 
     }
 
-    public static final String UGAM_SERVICE_USER = "ugam-service-user";
+    public static final String UGAM_SERVICE_USER = "ugamserviceuser";
 
     public static ResourceResolver newResolver(ResourceResolverFactory resourceResolverFactory ) throws LoginException, LoginException {
         final Map<String, Object> paramMap = new HashMap<String, Object>();

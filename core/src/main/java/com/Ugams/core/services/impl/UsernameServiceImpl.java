@@ -28,16 +28,15 @@ public class UsernameServiceImpl implements UsernameService {
 
     final Logger LOG = LoggerFactory.getLogger(UsernameServiceImpl.class);
 
-    @SlingObject
-    ResourceResolver resourceResolver;
+
 
     @Reference
     ResourceResolverFactory resourceResolverFactory;
 
-    @Inject
+    @Reference
     QueryBuilder queryBuilder;
 
-    String user = "sumedh";
+    String user = " ";
 
     @Activate
     public void activate(){
@@ -60,7 +59,6 @@ public class UsernameServiceImpl implements UsernameService {
         try{
             LOG.info("\n Inside Try..");
             ResourceResolver serviceResourceResolver = ResolverUtils.newResolver(resourceResolverFactory);
-            // LOG.info("\n resolver hit "+serviceResourceResolver.getUserID());
             Session session = serviceResourceResolver.adaptTo(Session.class);
             LOG.info("\n Result "+session.getUserID());
             Query userQuery = queryBuilder.createQuery(PredicateGroup.create(userMap), session);
@@ -69,10 +67,7 @@ public class UsernameServiceImpl implements UsernameService {
             LOG.info("Result "+result);
             List<Hit> Hits = result.getHits();
             for (Hit hit : Hits) {
-                LOG.info("Hitsssss"+hit);
-                //usernames.add((String) hit.getProperties().get("rep:principalName"));
-                //Resource hitresults = hit.getResource();
-                //usernames.add(hitresults.getName());
+
                 user = user + "\r\n" + hit.getProperties().get("rep:principalName", String.class);
             }
         } catch (RepositoryException |LoginException e) {
