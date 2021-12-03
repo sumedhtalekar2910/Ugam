@@ -1,0 +1,6 @@
+{
+  "scripts":[
+    "create service user service-user",
+    "set ACL for service-user\r\nallow jcr:read on /home/users\r\nallow jcr:read on /home/groups\r\nend"
+  ]
+}
