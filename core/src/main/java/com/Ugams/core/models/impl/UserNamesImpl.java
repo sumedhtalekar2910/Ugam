@@ -1,6 +1,6 @@
 package com.Ugams.core.models.impl;
 import com.Ugams.core.models.UserNames;
-import com.Ugams.core.services.UsernameService;
+
 import com.Ugams.core.utils.ResolverUtils;
 import com.day.cq.search.PredicateGroup;
 import com.day.cq.search.Query;
