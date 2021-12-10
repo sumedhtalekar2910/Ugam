@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2021-12-10T12:05:39.864+05:30"
+        cq:lastModifiedBy="admin"
+        cq:tags="[]"
+        cq:template="/conf/ugams/settings/wcm/templates/custom-xf"
+        cq:xfVariantType="web"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Portfolio Variation"
+        sling:resourceType="ugams/components/xfpage">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="ugams/components/container"
+            layout="responsiveGrid">
+            <responsivegrid
+                jcr:created="{Date}2021-06-21T13:10:23.051+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2021-06-21T13:10:23.051+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <cq:responsive jcr:primaryType="nt:unstructured"/>
+                <title_text_copy_1992
+                    jcr:created="{Date}2021-06-21T22:25:14.167+05:30"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2021-06-21T22:29:15.305+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ugams/components/content/title-text"
+                    bottomPadding="true"
+                    sectionGap="true"
+                    text="Who are in extremely love with eco friendly system."
+                    title="Our Latest Featured Projects"/>
+                <portfolio_teaser_cop
+                    jcr:created="{Date}2021-06-21T22:29:25.461+05:30"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2021-12-10T12:05:39.789+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ugams/components/content/portfolio-teaser"
+                    img="/content/dam/ugams/p1.jpg"
+                    portfolioText="2D Vinyl Design"
+                    portfolioTitle="Vector">
+                    <cq:responsive jcr:primaryType="nt:unstructured">
+                        <default
+                            jcr:primaryType="nt:unstructured"
+                            offset="0"
+                            width="4"/>
+                    </cq:responsive>
+                </portfolio_teaser_cop>
+                <portfolio_teaser_cop_34846357
+                    jcr:created="{Date}2021-06-21T22:30:15.845+05:30"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2021-06-21T22:31:09.594+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ugams/components/content/portfolio-teaser"
+                    img="/content/dam/ugams/p2.jpg"
+                    portfolioText="2D Vinyl Design"
+                    portfolioTitle="Vector">
+                    <cq:responsive jcr:primaryType="nt:unstructured">
+                        <default
+                            jcr:primaryType="nt:unstructured"
+                            offset="0"
+                            width="4"/>
+                    </cq:responsive>
+                </portfolio_teaser_cop_34846357>
+                <portfolio_teaser_cop_1549093533
+                    jcr:created="{Date}2021-06-21T22:31:24.637+05:30"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2021-06-22T11:53:55.233+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ugams/components/content/portfolio-teaser"
+                    img="/content/dam/ugams/p3.jpg"
+                    portfolioText="Creative Poster Design"
+                    portfolioTitle="Agency">
+                    <cq:responsive jcr:primaryType="nt:unstructured">
+                        <default
+                            jcr:primaryType="nt:unstructured"
+                            offset="0"
+                            width="4"/>
+                    </cq:responsive>
+                </portfolio_teaser_cop_1549093533>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>
