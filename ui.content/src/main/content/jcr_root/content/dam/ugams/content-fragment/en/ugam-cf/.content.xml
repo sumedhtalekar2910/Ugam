@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:isCheckedOut="{Boolean}true"
+    jcr:mixinTypes="[mix:referenceable,mix:versionable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="e71adafd-5d9d-4e32-aeb7-a804efd14f79">
+    <jcr:content
+        cq:name="ugam-cf"
+        cq:parentPath="/content/dam/ugams/content-fragment/en"
+        jcr:description=""
+        jcr:lastModified="{Date}2021-12-12T22:39:03.932+05:30"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent"
+        jcr:title="Ugam cf"
+        contentFragment="{Boolean}true"
+        lastFragmentSave="{Date}2021-12-12T22:39:03.932+05:30">
+        <data
+            cq:model="/conf/ugams/settings/dam/cfm/models/ugam-content-fragment"
+            jcr:primaryType="nt:unstructured">
+            <master
+                jcr:mixinTypes="[cq:Taggable]"
+                jcr:primaryType="nt:unstructured"
+                date="{Date}2021-12-13T22:38:00.000+05:30"
+                date_x0040_LastModified="{Date}2021-12-12T22:38:08.559+05:30"
+                description="[wqeeeeeeeeeeeeeeq,wddddddddddddda]"
+                description_x0040_LastModified="{Date}2021-12-12T22:38:08.559+05:30"
+                name="Sumedh Talekar"
+                name_x0040_LastModified="{Date}2021-12-12T22:38:08.558+05:30"
+                type="Author"
+                type_x0040_LastModified="{Date}2021-12-12T22:38:08.560+05:30"/>
+            <variation_2
+                jcr:mixinTypes="[cq:Taggable]"
+                jcr:primaryType="nt:unstructured"
+                date="{Date}2021-12-13T22:38:00.000+05:30"
+                date_x0040_LastModified="{Date}2021-12-12T22:39:03.892+05:30"
+                description="[wqeeeeeeeeeeeeeeq,wddddddddddddda,r4w3233,213132313]"
+                description_x0040_LastModified="{Date}2021-12-12T22:39:03.892+05:30"
+                name="Ugam"
+                name_x0040_LastModified="{Date}2021-12-12T22:39:03.891+05:30"
+                type="Publish"
+                type_x0040_LastModified="{Date}2021-12-12T22:39:03.893+05:30"/>
+        </data>
+        <metadata
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"/>
+        <model jcr:primaryType="nt:unstructured">
+            <variations jcr:primaryType="nt:unstructured">
+                <variation_2
+                    jcr:description=""
+                    jcr:mixinTypes="[cq:Taggable]"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Variation 2"
+                    name="variation_2">
+                    <properties
+                        jcr:primaryType="nt:unstructured"
+                        synchronizeWithVersion="[name:009db929-74c2-4505-ace9-3866d5e52354,description:009db929-74c2-4505-ace9-3866d5e52354,date:009db929-74c2-4505-ace9-3866d5e52354,type:009db929-74c2-4505-ace9-3866d5e52354]"/>
+                </variation_2>
+            </variations>
+        </model>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>
