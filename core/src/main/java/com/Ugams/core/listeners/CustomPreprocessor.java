@@ -1,5 +1,6 @@
 package com.Ugams.core.listeners;
 
+import com.Ugams.core.services.CurrentDate;
 import com.Ugams.core.utils.ResolverUtils;
 import com.day.cq.commons.date.DateUtil;
 import com.day.cq.commons.date.InvalidDateException;
@@ -23,6 +24,9 @@ public class CustomPreprocessor implements Preprocessor {
 
     private static final Logger log = LoggerFactory.getLogger(CustomPreprocessor.class);
 
+    @Reference
+    CurrentDate currentDate;
+
      @Reference
         private ResourceResolverFactory resourceResolverFactory;
         @Override
@@ -45,12 +49,11 @@ public class CustomPreprocessor implements Preprocessor {
                     if(node.getProperty("Time") != DateUtil.parseISO8601(DateUtil.getISO8601Date(Calendar.getInstance())))
                     {
                         log.debug("===============inside if====================");
-                        node.setProperty("Time" , DateUtil.parseISO8601(DateUtil.getISO8601Date(Calendar.getInstance())));
-                        session.save();
-                        session.logout();
-                    }else {
-                        log.debug("===============inside else====================");
+                        currentDate.UpdateDate();
+
                     }
+                    session.save();
+                    session.logout();
                 } catch (LoginException | RepositoryException | InvalidDateException e) {
                     e.printStackTrace();
                 }
