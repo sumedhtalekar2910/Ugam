@@ -27,6 +27,8 @@ public class CustomPreprocessor implements Preprocessor {
     @Reference
     CurrentDate currentDate;
 
+    String pagePath="/content/ugams/us/en/demo/jcr:content/root/container/date";
+
      @Reference
         private ResourceResolverFactory resourceResolverFactory;
         @Override
@@ -44,13 +46,12 @@ public class CustomPreprocessor implements Preprocessor {
                     log.debug("===============inside try====================");
                     serviceResourceResolver = ResolverUtils.newResolver(resourceResolverFactory);
                     Session session = serviceResourceResolver.adaptTo(Session.class);
-                    Resource resource = serviceResourceResolver.getResource("/content/ugams/us/en/demo/jcr:content/root/container/date");
+                    Resource resource = serviceResourceResolver.getResource(pagePath);
                     Node node = resource.adaptTo(Node.class);
                     if(node.getProperty("Time") != DateUtil.parseISO8601(DateUtil.getISO8601Date(Calendar.getInstance())))
                     {
                         log.debug("===============inside if====================");
-                        currentDate.UpdateDate();
-
+                        currentDate.UpdateDate(pagePath);
                     }
                     session.save();
                     session.logout();
