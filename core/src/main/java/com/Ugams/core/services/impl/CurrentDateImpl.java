@@ -23,17 +23,15 @@ public class CurrentDateImpl implements  CurrentDate{
 
     private static final Logger LOG = LoggerFactory.getLogger(CurrentDateImpl.class);
 
-
     @Reference
     ResourceResolverFactory resourceResolverFactory;
 
-
     @Override
-    public void UpdateDate() {
+    public void UpdateDate(String path) {
         try{
             ResourceResolver serviceResourceResolver = ResolverUtils.newResolver(resourceResolverFactory);
             Session session = serviceResourceResolver.adaptTo(Session.class);
-            Resource resource = serviceResourceResolver.getResource("/content/ugams/us/en/demo/jcr:content/root/container/date");
+            Resource resource = serviceResourceResolver.getResource(path);
             Node node = resource.adaptTo(Node.class);
             node.setProperty("Time" , DateUtil.parseISO8601(DateUtil.getISO8601Date(Calendar.getInstance())));
             session.save();

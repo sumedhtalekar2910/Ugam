@@ -37,6 +37,8 @@ public class CustomScheduler implements Runnable{
     @Reference
     CurrentDate currentDate;
 
+    String pagePath="/content/ugams/us/en/demo/jcr:content/root/container/date";
+
     @Activate
     protected void activate(SchedulerConfig config) {
         schedulerId = config.schedulerName().hashCode();
@@ -63,6 +65,6 @@ public class CustomScheduler implements Runnable{
     @Override
     public void run() {
        LOG.info("\n ====> RUN METHOD  ");
-        currentDate.UpdateDate();
+        currentDate.UpdateDate(pagePath);
     }
 }
