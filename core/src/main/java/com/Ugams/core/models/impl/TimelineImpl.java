@@ -34,10 +34,10 @@ public class TimelineImpl implements Timeline{
     @ChildResource
     Resource timeline;
 
-    @JsonProperty(value = "Component Name")
+   /* @JsonProperty(value = "Component Name")
     public String ComponentName(){
         return "Timeline";
-    }
+    }*/
 
     @Override
     public List<Map<String, String>> getTimelineDetails() {

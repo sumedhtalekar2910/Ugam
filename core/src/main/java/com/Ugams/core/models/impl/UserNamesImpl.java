@@ -44,10 +44,10 @@ public class UserNamesImpl implements UserNames {
     String user = " ";
 
 
-    @PostConstruct
+   /* @PostConstruct
     protected void init(){
         LOG.info("\n printing Model logs");
-    }
+    }*/
 
     @Override
     public String getUserNames() throws RepositoryException {
@@ -72,10 +72,8 @@ public class UserNamesImpl implements UserNames {
             for (Hit hit : Hits) {
                 user = user + "\r\n" + hit.getProperties().get("rep:principalName", String.class);
             }
-        } catch (RepositoryException e) {
-            LOG.info("Service User ERROR",e.getMessage());
-        } catch (LoginException e) {
-            e.printStackTrace();
+        } catch (RepositoryException | LoginException e) {
+           // LOG.info("Service User ERROR",e.getMessage());
         }
         return user;
     }

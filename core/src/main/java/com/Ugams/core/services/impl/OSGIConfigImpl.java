@@ -17,13 +17,14 @@ public class OSGIConfigImpl implements OSGIConfig {
     private String runModes;
 
     @Activate
-    protected void activate(UgamOSGIConfig ugamOSGIConfig){
+    public void activate(UgamOSGIConfig ugamOSGIConfig){
         serviceName=ugamOSGIConfig.serviceName();
         serviceID=ugamOSGIConfig.serviceID();
         isService=ugamOSGIConfig.isService();
         countries=ugamOSGIConfig.serviceCountry();
         runModes=ugamOSGIConfig.serviceRunMode();
     }
+
 
 
     @Override
