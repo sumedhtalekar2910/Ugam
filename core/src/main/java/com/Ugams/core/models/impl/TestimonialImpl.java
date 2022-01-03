@@ -53,8 +53,8 @@ public class TestimonialImpl implements Testimonial{
         return desg;
     }
 
-    @JsonProperty(value = "Component Name")
+    /*@JsonProperty(value = "Component Name")
     public String ComponentName(){
         return "Testimonial";
-    }
+    }*/
 }

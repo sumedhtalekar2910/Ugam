@@ -77,8 +77,8 @@ public class HomeAboutImpl implements HomeAbout{
         return path;
     }
 
-    @JsonProperty(value = "Component Name")
+    /*@JsonProperty(value = "Component Name")
     public String ComponentName(){
         return "Home About";
-    }
+    }*/
 }
