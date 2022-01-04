@@ -53,7 +53,7 @@ public class UserNamesImpl implements UserNames {
     public String getUserNames() throws RepositoryException {
 
         LOG.info("\n Inside Getusername of service ");
-        List<String> usernames = new ArrayList<>();
+        //List<String> usernames = new ArrayList<>();
         Map<String, String> userMap = new HashMap<>();
         userMap.put("p.hits", "selective");
         userMap.put("p.limit", "-1");
