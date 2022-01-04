@@ -13,7 +13,7 @@ import static org.mockito.Mockito.*;
 
 class CustomSchedulerTest {
 
-    AemContext aemContext = new AemContext(ResourceResolverType.JCR_MOCK);
+  /*  AemContext aemContext = new AemContext(ResourceResolverType.JCR_MOCK);
     CustomScheduler customScheduler;
     CurrentDate currentDate;
 
@@ -38,7 +38,7 @@ class CustomSchedulerTest {
         SchedulerConfig config = mock(SchedulerConfig.class);
         //lenient().when(config.schedulerName().hashCode()).thenReturn(1234);
         customScheduler.deactivate(config);
-    }
+    }*/
 
   /*  @Test
     void run() throws NoSuchFieldException {
