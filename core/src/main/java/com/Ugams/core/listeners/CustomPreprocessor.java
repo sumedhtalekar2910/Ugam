@@ -22,7 +22,7 @@ import java.util.Calendar;
 @Component(immediate = true)
 public class CustomPreprocessor implements Preprocessor {
 
-    private static final Logger log = LoggerFactory.getLogger(CustomPreprocessor.class);
+    //private static final Logger log = LoggerFactory.getLogger(CustomPreprocessor.class);
 
     @Reference
     CurrentDate currentDate;
