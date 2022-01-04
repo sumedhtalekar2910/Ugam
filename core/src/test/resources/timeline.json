@@ -1,6 +1,6 @@
 {
-  "Timeline": {
-    "timelineDetails":
+  "timeline": {
+    "item":
       {
         "text1": "Session: 2010-11",
         "text2": "Result: 3.78 (In the Scale of 4.00)",

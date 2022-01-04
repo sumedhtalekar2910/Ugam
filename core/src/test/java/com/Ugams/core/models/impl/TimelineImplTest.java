@@ -36,8 +36,11 @@ class TimelineImplTest {
     @Test
     void getTimelineDetails() {
 
-        Resource json = aemContext.currentResource("/content/Timeline");
+        Resource json = aemContext.currentResource("/content");
         Timeline timeline = json.adaptTo(Timeline.class);
         assertNotNull(timeline.getTimelineDetails());
+        assertEquals("Session: 2010-11",timeline.getTimelineDetails().get(0).get("text1"));
+        assertEquals("Result: 3.78 (In the Scale of 4.00)",timeline.getTimelineDetails().get(0).get("text2"));
+        assertEquals("Masters in Graphics & Fine Arts",timeline.getTimelineDetails().get(0).get("title"));
     }
 }
