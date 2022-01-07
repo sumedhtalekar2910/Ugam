@@ -1,0 +1,14 @@
+[
+    {
+        "text" : "India",
+        "value": "india"
+    },
+    {
+        "text" : "Australia",
+        "value": "australia"
+    },
+    {
+        "text" : "US",
+        "value": "us"
+    }
+]
