@@ -1,6 +1,6 @@
-package com.Ugams.core.services.impl;
+package com.ugams.core.services.impl;
 
-import com.Ugams.core.config.UgamOSGIConfig;
+import com.ugams.core.config.UgamOSGIConfig;
 import io.wcm.testing.mock.aem.junit5.AemContext;
 import io.wcm.testing.mock.aem.junit5.AemContextExtension;
 import org.junit.jupiter.api.BeforeEach;
@@ -38,9 +38,6 @@ class OSGIConfigImplTest {
         osgiConfig.activate(ugamOSGIConfig);
     }
 
-    @Test
-    void activate() {
-    }
 
     @Test
     void getServiceName() {

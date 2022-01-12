@@ -1,12 +1,9 @@
-package com.Ugams.core.schedulers;
+package com.ugams.core.schedulers;
 
-import com.Ugams.core.config.SchedulerConfig;
-import com.Ugams.core.services.CurrentDate;
-import com.Ugams.core.utils.ResolverUtils;
-import org.apache.sling.api.resource.*;
+import com.ugams.core.config.SchedulerConfig;
+import com.ugams.core.services.CurrentDate;
 import org.apache.sling.commons.scheduler.ScheduleOptions;
 import org.apache.sling.commons.scheduler.Scheduler;
-import org.apache.sling.models.annotations.injectorspecific.OSGiService;
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Deactivate;
@@ -14,13 +11,6 @@ import org.osgi.service.component.annotations.Reference;
 import org.osgi.service.metatype.annotations.Designate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import javax.inject.Inject;
-import javax.jcr.Node;
-import javax.jcr.RepositoryException;
-import javax.jcr.Session;
-import java.util.Date;
-import java.util.Optional;
 
 @Component(immediate = true, service = Runnable.class)
 @Designate(ocd = SchedulerConfig.class)
@@ -37,7 +27,6 @@ public class CustomScheduler implements Runnable{
     @Reference
     CurrentDate currentDate;
 
-    String pagePath="/content/ugams/us/en/demo/jcr:content/root/container/date";
 
     @Activate
     protected void activate(SchedulerConfig config) {
@@ -65,6 +54,6 @@ public class CustomScheduler implements Runnable{
     @Override
     public void run() {
        LOG.info("\n ====> RUN METHOD  ");
-        currentDate.UpdateDate(pagePath);
+        currentDate.updateDate("/content/ugams/us/en/demo/jcr:content/root/container/date");
     }
 }

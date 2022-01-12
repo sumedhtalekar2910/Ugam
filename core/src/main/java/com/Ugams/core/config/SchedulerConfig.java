@@ -1,11 +1,11 @@
-package com.Ugams.core.config;
+package com.ugams.core.config;
 
 import org.osgi.service.metatype.annotations.AttributeDefinition;
 import org.osgi.service.metatype.annotations.AttributeType;
 import org.osgi.service.metatype.annotations.ObjectClassDefinition;
 
 @ObjectClassDefinition(
-        name = "Ugams - Scheduler Configuration",
+        name = "ugams - Scheduler Configuration",
         description = "Sling scheduler configuration"
 )
 public @interface SchedulerConfig {

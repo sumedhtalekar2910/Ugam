@@ -14,6 +14,6 @@
  *  limitations under the License.
  */
 @Version("1.0")
-package com.Ugams.core.listeners;
+package com.ugams.core.listeners;
 
 import org.osgi.annotation.versioning.Version;

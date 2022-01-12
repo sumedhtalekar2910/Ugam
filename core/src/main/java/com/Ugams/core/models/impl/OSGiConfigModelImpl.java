@@ -1,7 +1,7 @@
-package com.Ugams.core.models.impl;
+package com.ugams.core.models.impl;
 
-import com.Ugams.core.models.OSGiConfigModel;
-import com.Ugams.core.services.OSGIConfig;
+import com.ugams.core.models.OSGiConfigModel;
+import com.ugams.core.services.OSGIConfig;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.models.annotations.DefaultInjectionStrategy;
 import org.apache.sling.models.annotations.Model;

@@ -1,4 +1,4 @@
-package com.Ugams.core.workflow;
+package com.ugams.core.workflow;
 
 import com.adobe.granite.workflow.exec.WorkflowData;
 import org.osgi.service.component.annotations.Component;
@@ -16,12 +16,11 @@ import javax.jcr.Session;
 
 @Component(
         service = WorkflowProcess.class,
-        property = {"process.label" + " = Ugams Workflow Step"}
+        property = {"process.label" + " = ugams Workflow Step"}
 )
 public class CustomWorkflow implements WorkflowProcess{
 
     private static final Logger log = LoggerFactory.getLogger(CustomWorkflow.class);
-
 
     @Override
     public void execute(WorkItem workItem, WorkflowSession workflowSession, MetaDataMap metaDataMap) throws WorkflowException {
@@ -34,7 +33,7 @@ public class CustomWorkflow implements WorkflowProcess{
                 Session session = workflowSession.adaptTo(Session.class);
                 String payloadpath = workflowData.getPayload().toString() + "/jcr:content";
                 Node node = (Node) session.getItem(payloadpath);
-                String[] process = metaDataMap.get("PROCESS_ARGS","string").toString().split(",");
+                String[] process = metaDataMap.get("PROCESS_ARGS","string").split(",");
                 for (String pro : process) {
                     String [] arg=pro.split(":");
                     String property=arg[0];
@@ -45,7 +44,7 @@ public class CustomWorkflow implements WorkflowProcess{
                 }
             }
         }catch (Exception e){
-            log.info("\n ERROR",e.getMessage());
+            log.info(e.getMessage());
         }
     }
 

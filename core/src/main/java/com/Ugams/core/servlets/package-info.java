@@ -14,6 +14,6 @@
  *  limitations under the License.
  */
 @Version("1.0")
-package com.Ugams.core.servlets;
+package com.ugams.core.servlets;
 
 import org.osgi.annotation.versioning.Version;

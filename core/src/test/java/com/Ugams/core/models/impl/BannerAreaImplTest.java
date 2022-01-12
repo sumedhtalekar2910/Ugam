@@ -1,6 +1,6 @@
-package com.Ugams.core.models.impl;
+package com.ugams.core.models.impl;
 
-import com.Ugams.core.models.BannerArea;
+import com.ugams.core.models.BannerArea;
 import io.wcm.testing.mock.aem.junit5.AemContext;
 import io.wcm.testing.mock.aem.junit5.AemContextExtension;
 import org.apache.sling.api.resource.Resource;
@@ -20,14 +20,11 @@ class BannerAreaImplTest {
 
     @BeforeEach
     void setUp() {
-
         aemContext.load().json("/bannerarea.json","/content");
-
     }
 
     @Test
     void getBannerAreaTitle() {
-
         Resource resource = aemContext.currentResource("/content/banner");
         BannerArea bannerArea = resource.adaptTo(BannerArea.class);
         assertEquals("THIS IS ME", bannerArea.getBannerAreaTitle());

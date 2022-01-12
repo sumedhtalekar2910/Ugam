@@ -3,6 +3,6 @@
     cq:trigger="rollout"
     jcr:description="Standard rollout configuration which allows to start rollout process on rollout trigger and runs actions: create, update, delete content and order children nodes."
     jcr:primaryType="cq:RolloutConfig"
-    jcr:title="Ugams rollout config">
+    jcr:title="ugams rollout config">
     <contentUpdate jcr:primaryType="cq:LiveSyncAction"/>
 </jcr:root>

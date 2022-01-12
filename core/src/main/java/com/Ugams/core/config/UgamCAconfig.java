@@ -1,4 +1,4 @@
-package com.Ugams.core.config;
+package com.ugams.core.config;
 import org.apache.sling.caconfig.annotation.Configuration;
 import org.apache.sling.caconfig.annotation.Property;
 @Configuration(label="",description = "")

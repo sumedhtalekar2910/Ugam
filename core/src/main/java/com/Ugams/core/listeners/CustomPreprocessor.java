@@ -1,7 +1,7 @@
-package com.Ugams.core.listeners;
+package com.ugams.core.listeners;
 
-import com.Ugams.core.services.CurrentDate;
-import com.Ugams.core.utils.ResolverUtils;
+import com.ugams.core.services.CurrentDate;
+import com.ugams.core.utils.ResolverUtils;
 import com.day.cq.commons.date.DateUtil;
 import com.day.cq.commons.date.InvalidDateException;
 import com.day.cq.replication.*;
@@ -11,9 +11,6 @@ import org.apache.sling.api.resource.ResourceResolver;
 import org.apache.sling.api.resource.ResourceResolverFactory;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import javax.jcr.Node;
 import javax.jcr.RepositoryException;
 import javax.jcr.Session;
@@ -22,12 +19,8 @@ import java.util.Calendar;
 @Component(immediate = true)
 public class CustomPreprocessor implements Preprocessor {
 
-    //private static final Logger log = LoggerFactory.getLogger(CustomPreprocessor.class);
-
     @Reference
     CurrentDate currentDate;
-
-    String pagePath="/content/ugams/us/en/demo/jcr:content/root/container/date";
 
      @Reference
         private ResourceResolverFactory resourceResolverFactory;
@@ -40,18 +33,13 @@ public class CustomPreprocessor implements Preprocessor {
             }
             String path = replicationAction.getPath();
             if(path.equals("/content/ugams/us/en/demo")){
-                //log.debug("path equal");
-                ResourceResolver serviceResourceResolver = null;
-                try {
-                    //log.debug("===============inside try====================");
-                    serviceResourceResolver = ResolverUtils.newResolver(resourceResolverFactory);
+                try (ResourceResolver serviceResourceResolver= ResolverUtils.newResolver(resourceResolverFactory)){
                     Session session = serviceResourceResolver.adaptTo(Session.class);
-                    Resource resource = serviceResourceResolver.getResource(pagePath);
+                    Resource resource = serviceResourceResolver.getResource("/content/ugams/us/en/demo/jcr:content/root/container/date");
                     Node node = resource.adaptTo(Node.class);
                     if(node.getProperty("Time") != DateUtil.parseISO8601(DateUtil.getISO8601Date(Calendar.getInstance())))
                     {
-                       // log.debug("===============inside if====================");
-                        currentDate.UpdateDate(pagePath);
+                        currentDate.updateDate("/content/ugams/us/en/demo/jcr:content/root/container/date");
                     }
                     session.save();
                     session.logout();
@@ -59,11 +47,5 @@ public class CustomPreprocessor implements Preprocessor {
                     e.printStackTrace();
                 }
             }
-            /*try {
-                log.debug(path);
-            }
-            catch (Exception e) {
-               log.debug(e.getMessage());
-            }*/
         }
     }

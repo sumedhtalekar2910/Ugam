@@ -1,17 +1,14 @@
-package com.Ugams.core.models.impl;
+package com.ugams.core.models.impl;
 
 
-import com.Ugams.core.config.UgamOSGIConfig;
-import com.Ugams.core.models.OSGiConfigModel;
-import com.Ugams.core.services.OSGIConfig;
-import com.Ugams.core.services.impl.OSGIConfigImpl;
+import com.ugams.core.config.UgamOSGIConfig;
+import com.ugams.core.models.OSGiConfigModel;
+import com.ugams.core.services.impl.OSGIConfigImpl;
 import io.wcm.testing.mock.aem.junit5.AemContext;
 import io.wcm.testing.mock.aem.junit5.AemContextExtension;
-import junitx.util.PrivateAccessor;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import static org.junit.jupiter.api.Assertions.*;

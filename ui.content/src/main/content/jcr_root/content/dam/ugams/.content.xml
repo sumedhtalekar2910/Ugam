@@ -4,7 +4,7 @@
     <jcr:content
         cq:conf="/conf/ugams"
         jcr:primaryType="nt:unstructured"
-        jcr:title="Ugams">
+        jcr:title="ugams">
         <folderThumbnail/>
     </jcr:content>
     <asset.jpg/>

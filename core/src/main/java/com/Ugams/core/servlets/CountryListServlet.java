@@ -1,4 +1,4 @@
-package com.Ugams.core.servlets;
+package com.ugams.core.servlets;
 
 import com.adobe.granite.ui.components.ds.DataSource;
 import com.adobe.granite.ui.components.ds.SimpleDataSource;
@@ -67,7 +67,7 @@ public class CountryListServlet extends SlingSafeMethodsServlet {
                 data.put(jsonArray.getJSONObject(i).getString("text"),
                         jsonArray.getJSONObject(i).getString("value"));
         }
-        @SuppressWarnings({"unchecked", "rawtypes"})
+
         DataSource ds = new SimpleDataSource(new TransformIterator<>(data.keySet().iterator(), (Transformer) o -> {
             String dropValue = (String) o;
             ValueMap vm = new ValueMapDecorator(new HashMap<>());

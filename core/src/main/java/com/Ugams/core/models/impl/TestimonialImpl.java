@@ -1,8 +1,8 @@
-package com.Ugams.core.models.impl;
+package com.ugams.core.models.impl;
 
 
 
-import com.Ugams.core.models.Testimonial;
+import com.ugams.core.models.Testimonial;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonRootName;
 import org.apache.sling.api.resource.Resource;
@@ -24,7 +24,7 @@ import javax.inject.Inject;
 @JsonRootName("Testimonial")
 public class TestimonialImpl implements Testimonial{
 
-    final protected static String RESOURCE_TYPE="ugams/components/content/testimonial";
+    protected static final String RESOURCE_TYPE="ugams/components/content/testimonial";
 
     @Inject
     String name;
@@ -53,8 +53,4 @@ public class TestimonialImpl implements Testimonial{
         return desg;
     }
 
-    /*@JsonProperty(value = "Component Name")
-    public String ComponentName(){
-        return "Testimonial";
-    }*/
 }

@@ -18,14 +18,14 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>com.Ugams</groupId>
+        <groupId>com.ugams</groupId>
         <artifactId>ugams</artifactId>
         <version>1.0.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
     <artifactId>ugams.core</artifactId>
-    <name>Ugams - Core</name>
-    <description>Core bundle for Ugams</description>
+    <name>ugams - Core</name>
+    <description>Core bundle for ugams</description>
     <build>
         <plugins>
             <plugin>

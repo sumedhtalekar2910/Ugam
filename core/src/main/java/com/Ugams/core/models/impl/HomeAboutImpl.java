@@ -1,6 +1,6 @@
-package com.Ugams.core.models.impl;
+package com.ugams.core.models.impl;
 
-import com.Ugams.core.models.HomeAbout;
+import com.ugams.core.models.HomeAbout;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonRootName;
 import org.apache.sling.api.resource.Resource;
@@ -25,7 +25,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement(name = "Home-About")
 public class HomeAboutImpl implements HomeAbout{
 
-    final protected static String RESOURCE_TYPE="ugams/components/content/home-about";
+    protected static final String RESOURCE_TYPE="ugams/components/content/home-about";
 
     @Inject
     String title;
@@ -77,8 +77,4 @@ public class HomeAboutImpl implements HomeAbout{
         return path;
     }
 
-    /*@JsonProperty(value = "Component Name")
-    public String ComponentName(){
-        return "Home About";
-    }*/
 }

@@ -1,4 +1,4 @@
-package com.Ugams.core.servlets;
+package com.ugams.core.servlets;
 
 import com.day.cq.wcm.api.Page;
 import com.day.cq.wcm.api.PageManager;
@@ -19,7 +19,7 @@ import java.util.List;
 @SlingServletResourceTypes(
         resourceTypes = "ugams/components/page"
 )
-public class resourcetype extends SlingSafeMethodsServlet {
+public class Resourcetype extends SlingSafeMethodsServlet {
 
 
     @Override
@@ -27,7 +27,7 @@ public class resourcetype extends SlingSafeMethodsServlet {
 
         final ResourceResolver resourceResolver = request.getResourceResolver();
         Page page = resourceResolver.adaptTo(PageManager.class).getPage("/content/ugams/us/en");
-        List pagesList = new ArrayList();
+        List<String> pagesList = new ArrayList<>();
             Iterator<Page> childPages = page.listChildren();
             while (childPages.hasNext()) {
                 Page childPage = childPages.next();
