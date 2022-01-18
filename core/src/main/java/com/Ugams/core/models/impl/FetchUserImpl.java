@@ -76,7 +76,8 @@ public class FetchUserImpl implements FetchUser {
 
     @Override
     public String getAvatar() {
-        return avatar;
+       String imgPath = avatar.replaceAll("https://reqres.in/img/faces/","/content/dam/ugams/");
+        return imgPath;
     }
 
 }
