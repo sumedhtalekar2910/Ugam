@@ -1,10 +1,13 @@
 package com.ugams.core.models.impl;
 
 import com.ugams.core.models.UserList;
+import com.ugams.core.services.FetchApiUrl;
+import com.ugams.core.utils.FetchApi;
 import com.ugams.core.utils.Network;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.DefaultInjectionStrategy;
 import org.apache.sling.models.annotations.Model;
+import org.apache.sling.models.annotations.injectorspecific.OSGiService;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -25,14 +28,15 @@ public class UserListImpl implements UserList {
     @Inject
     String pageNo;
 
+    @OSGiService
+    FetchApiUrl fetchApiUrl;
+
     @Override
     public List<Map<String, String>> getData() throws JSONException, IOException {
 
-        String response = Network.readJson(getUrl());
+        String response = FetchApi.readData(getUrl());
         JSONObject jsonObject =  new JSONObject(response);
-
         log.info(String.valueOf(jsonObject));
-
         JSONArray jsonArray1 = jsonObject.getJSONArray("data");
         log.info("==============="+jsonArray1);
         log.info("==============="+jsonArray1.length());
@@ -52,6 +56,8 @@ public class UserListImpl implements UserList {
 
     @Override
     public String getUrl() {
-        return "https://reqres.in/api/users?page="+pageNo;
+        //return "https://reqres.in/api/users?page="+pageNo;
+        String multiUrl = fetchApiUrl.getMultiUserUrl();
+        return multiUrl+pageNo;
     }
 }
