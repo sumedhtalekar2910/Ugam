@@ -13,7 +13,7 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-package com.Ugams.core.servlets;
+package com.ugams.core.servlets;
 
 import java.io.IOException;
 

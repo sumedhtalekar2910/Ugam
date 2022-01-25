@@ -1,11 +1,9 @@
-package com.Ugams.core.services.impl;
+package com.ugams.core.services.impl;
 
 
-import com.Ugams.core.services.CurrentDate;
-import com.Ugams.core.utils.ResolverUtils;
+import com.ugams.core.services.CurrentDate;
+import com.ugams.core.utils.ResolverUtils;
 import com.day.cq.commons.date.DateUtil;
-import com.day.cq.commons.date.InvalidDateException;
-import org.apache.sling.api.resource.LoginException;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ResourceResolver;
 import org.apache.sling.api.resource.ResourceResolverFactory;
@@ -16,10 +14,8 @@ import org.slf4j.LoggerFactory;
 
 
 import javax.jcr.Node;
-import javax.jcr.RepositoryException;
 import javax.jcr.Session;
 import java.util.Calendar;
-import java.util.TimeZone;
 
 @Component(service = CurrentDate.class,immediate = true)
 public class CurrentDateImpl implements  CurrentDate{
@@ -30,9 +26,8 @@ public class CurrentDateImpl implements  CurrentDate{
     ResourceResolverFactory resourceResolverFactory;
 
     @Override
-    public void UpdateDate(String path){
-        try{
-            ResourceResolver serviceResourceResolver = ResolverUtils.newResolver(resourceResolverFactory);
+    public void updateDate(String path){
+        try(ResourceResolver serviceResourceResolver = ResolverUtils.newResolver(resourceResolverFactory)){
             Session session = serviceResourceResolver.adaptTo(Session.class);
             Resource resource = serviceResourceResolver.getResource(path);
             Node node = resource.adaptTo(Node.class);

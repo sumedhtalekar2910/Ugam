@@ -1,10 +1,8 @@
-package com.Ugams.core.models.impl;
+package com.ugams.core.models.impl;
 
 
-import com.Ugams.core.models.Timeline;
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.ugams.core.models.Timeline;
 import com.fasterxml.jackson.annotation.JsonRootName;
-import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.DefaultInjectionStrategy;
 import org.apache.sling.models.annotations.Exporter;
@@ -28,16 +26,10 @@ import java.util.Map;
 @JsonRootName("Timeline")
 public class TimelineImpl implements Timeline{
 
-    final protected static String RESOURCE_TYPE="ugams/components/content/timeline";
-
+    protected static final String RESOURCE_TYPE="ugams/components/content/timeline";
 
     @ChildResource
     Resource timeline;
-
-   /* @JsonProperty(value = "Component Name")
-    public String ComponentName(){
-        return "Timeline";
-    }*/
 
     @Override
     public List<Map<String, String>> getTimelineDetails() {

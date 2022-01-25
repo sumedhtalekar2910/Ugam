@@ -1,4 +1,4 @@
-package com.Ugams.core.models;
+package com.ugams.core.models;
 
 public interface Portfolio {
     String getPortfolioTitle();

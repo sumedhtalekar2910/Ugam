@@ -5,7 +5,7 @@
         cq:allowedTemplates="[/conf/ugams/settings/wcm/templates/(?!xf-).*]"
         cq:conf="/conf/ugams"
         jcr:primaryType="cq:PageContent"
-        jcr:title="Ugams"
+        jcr:title="ugams"
         sling:configRef="/conf/ugams"
         sling:redirect="{Boolean}true"
         sling:redirectStatus="{Long}302"

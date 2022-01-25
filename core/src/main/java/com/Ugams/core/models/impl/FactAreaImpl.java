@@ -1,7 +1,7 @@
-package com.Ugams.core.models.impl;
+package com.ugams.core.models.impl;
 
 
-import com.Ugams.core.models.FactArea;
+import com.ugams.core.models.FactArea;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.DefaultInjectionStrategy;
 import org.apache.sling.models.annotations.Model;
@@ -17,7 +17,6 @@ import java.util.Map;
         adapters = FactArea.class,
         defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
 public class FactAreaImpl implements FactArea{
-
 
     @ChildResource
     Resource factareamultifield;

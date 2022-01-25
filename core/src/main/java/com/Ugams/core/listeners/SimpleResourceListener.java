@@ -13,7 +13,7 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-package com.Ugams.core.listeners;
+package com.ugams.core.listeners;
 
 import org.apache.sling.api.SlingConstants;
 import org.osgi.service.component.annotations.Component;

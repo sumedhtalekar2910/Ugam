@@ -1,7 +1,6 @@
-package com.Ugams.core.models.impl;
+package com.ugams.core.models.impl;
 
-import com.Ugams.core.models.BannerArea;
-import com.Ugams.core.models.BannerNav;
+import com.ugams.core.models.BannerNav;
 import io.wcm.testing.mock.aem.junit5.AemContext;
 import io.wcm.testing.mock.aem.junit5.AemContextExtension;
 import org.apache.sling.api.resource.Resource;

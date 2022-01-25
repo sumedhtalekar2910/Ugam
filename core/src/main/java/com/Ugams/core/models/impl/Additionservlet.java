@@ -1,4 +1,4 @@
-package com.Ugams.core.models.impl;
+package com.ugams.core.models.impl;
 
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.SlingHttpServletResponse;
@@ -13,9 +13,7 @@ import java.io.IOException;
 @SlingServletPaths(
         value = {"/bin/add"}
 )
-public class additionservlet extends SlingAllMethodsServlet {
-
-
+public class Additionservlet extends SlingAllMethodsServlet {
 
     @Override
     protected void doGet(final SlingHttpServletRequest req, final SlingHttpServletResponse resp) throws IOException {

@@ -13,7 +13,7 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-package com.Ugams.core.schedulers;
+package com.ugams.core.schedulers;
 
 import java.util.List;
 

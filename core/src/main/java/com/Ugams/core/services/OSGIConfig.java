@@ -1,4 +1,4 @@
-package com.Ugams.core.services;
+package com.ugams.core.services;
 
 public interface OSGIConfig {
     public String getServiceName();

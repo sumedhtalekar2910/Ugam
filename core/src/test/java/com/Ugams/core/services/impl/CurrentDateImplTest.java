@@ -1,22 +1,15 @@
-package com.Ugams.core.services.impl;
+package com.ugams.core.services.impl;
 
-import com.Ugams.core.services.CurrentDate;
+import com.ugams.core.services.CurrentDate;
 import io.wcm.testing.mock.aem.junit5.AemContext;
 import io.wcm.testing.mock.aem.junit5.AemContextExtension;
-import junitx.util.PrivateAccessor;
-import org.apache.sling.api.resource.Resource;
-import org.apache.sling.resourcebuilder.api.ResourceBuilder;
 import org.apache.sling.testing.mock.sling.ResourceResolverType;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import javax.jcr.Node;
-
-import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 @ExtendWith({AemContextExtension.class, MockitoExtension.class})
@@ -47,8 +40,8 @@ class CurrentDateImplTest {
         //assertEquals(path,currentDate.UpdateDate(path));
         //doNothing().when(currentDate).UpdateDate(path);
 
-        currentDate.UpdateDate(path);
-        Mockito.verify(currentDate,times(1)).UpdateDate(path);
+        currentDate.updateDate(path);
+        Mockito.verify(currentDate,times(1)).updateDate(path);
 
     }
 }

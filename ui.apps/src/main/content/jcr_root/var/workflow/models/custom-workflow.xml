@@ -24,7 +24,7 @@
             type="PROCESS">
             <metaData
                 jcr:primaryType="nt:unstructured"
-                PROCESS="com.Ugams.core.workflow.CustomWorkflow"
+                PROCESS="com.ugams.core.workflow.CustomWorkflow"
                 PROCESS_ARGS="Process1:Ugam"
                 PROCESS_AUTO_ADVANCE="true"/>
         </node1>
@@ -44,7 +44,7 @@
             type="PROCESS">
             <metaData
                 jcr:primaryType="nt:unstructured"
-                PROCESS="com.Ugams.core.workflow.CustomWorkflow"
+                PROCESS="com.ugams.core.workflow.CustomWorkflow"
                 PROCESS_ARGS="Process2:Merkle"
                 PROCESS_AUTO_ADVANCE="true"/>
         </node3>

@@ -1,7 +1,6 @@
-package com.Ugams.core.models;
+package com.ugams.core.models;
 
 import javax.jcr.RepositoryException;
-import java.util.List;
 
 public interface UserNames {
 

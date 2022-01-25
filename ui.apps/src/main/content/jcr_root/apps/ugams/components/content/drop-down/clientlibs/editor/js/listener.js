@@ -1,9 +1,8 @@
 (function ($, document, ns) {
     $(document).on("dialog-ready", function() {
-    	// In dialog ready lets request the JSON and store it
         let citiesJSON;
 		$.ajax({
-            url: "/content/dam/ugams/cities.json", //Update the path
+            url: "/content/dam/ugams/cities.json",
             async: false,
             success: function (data) {
                 citiesJSON = data;
@@ -25,7 +24,6 @@
                 optionItems.add(obj);
             }
         };
-
 
        $(".cq-dialog").find("#country").on("change", setCitiesOptions);
         setCitiesOptions();

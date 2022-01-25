@@ -1,5 +1,5 @@
-package com.Ugams.core.services;
+package com.ugams.core.services;
 
 public interface CurrentDate {
-    void UpdateDate(String path);
+    void updateDate(String path);
 }

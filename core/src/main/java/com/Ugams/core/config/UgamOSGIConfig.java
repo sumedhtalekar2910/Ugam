@@ -1,11 +1,11 @@
-package com.Ugams.core.config;
+package com.ugams.core.config;
 
 import org.osgi.service.metatype.annotations.AttributeDefinition;
 import org.osgi.service.metatype.annotations.AttributeType;
 import org.osgi.service.metatype.annotations.ObjectClassDefinition;
 import org.osgi.service.metatype.annotations.Option;
 
-@ObjectClassDefinition(name="Ugams - OSGi Configuration",
+@ObjectClassDefinition(name="ugams - OSGi Configuration",
         description = " OSGi Configuration with run modes.")
 public @interface UgamOSGIConfig {
 

@@ -34,7 +34,7 @@ services:
     volumes:
       - ./reports:/tmp/reports
       - 'shared:/tmp/shared'
-    image: 'com.Ugams-ugams.ui.tests/ui.tests:latest'
+    image: 'com.ugams-ugams.ui.tests/ui.tests:latest'
   selenium-firefox:
     image: 'selenium/standalone-firefox-debug'
     ports:

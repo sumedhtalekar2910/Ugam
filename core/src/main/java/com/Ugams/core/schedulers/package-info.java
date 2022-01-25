@@ -14,6 +14,6 @@
  *  limitations under the License.
  */
 @Version("1.0")
-package com.Ugams.core.schedulers;
+package com.ugams.core.schedulers;
 
 import org.osgi.annotation.versioning.Version;

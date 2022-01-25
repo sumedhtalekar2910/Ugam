@@ -1,4 +1,4 @@
-package com.Ugams.core.servlets;
+package com.ugams.core.servlets;
 
 import com.adobe.cq.commerce.common.ValueMapDecorator;
 import com.adobe.granite.ui.components.ds.DataSource;
@@ -29,10 +29,9 @@ public class PagelistServlet extends SlingSafeMethodsServlet {
     @Override
     protected void doGet(SlingHttpServletRequest request,SlingHttpServletResponse response) {
         try {
-            String path = "/content/ugams/us/en";
             ResourceResolver resourceResolver = request.getResourceResolver();
             List<KeyValue> dropDownList = new ArrayList<>();
-            Resource pathResource = resourceResolver.getResource(path);
+            Resource pathResource = resourceResolver.getResource("/content/ugams/us/en");
             if(pathResource != null) {
                 Page page = pathResource.adaptTo(Page.class);
                 if (page != null) {
@@ -60,6 +59,7 @@ public class PagelistServlet extends SlingSafeMethodsServlet {
                 }
             }
         } catch (Exception e) {
+            e.getStackTrace();
         }
     }
 

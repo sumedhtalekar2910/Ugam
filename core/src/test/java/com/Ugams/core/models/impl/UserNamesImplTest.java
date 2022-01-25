@@ -1,6 +1,6 @@
-package com.Ugams.core.models.impl;
+package com.ugams.core.models.impl;
 
-import com.Ugams.core.models.UserNames;
+import com.ugams.core.models.UserNames;
 import com.day.cq.search.PredicateGroup;
 import com.day.cq.search.Query;
 import com.day.cq.search.QueryBuilder;
