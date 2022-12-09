@@ -3,7 +3,6 @@ package com.ugams.core.models.impl;
 import com.ugams.core.models.UserList;
 import com.ugams.core.services.FetchApiUrl;
 import com.ugams.core.utils.FetchApi;
-import com.ugams.core.utils.Network;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.DefaultInjectionStrategy;
 import org.apache.sling.models.annotations.Model;
@@ -36,10 +35,7 @@ public class UserListImpl implements UserList {
 
         String response = FetchApi.readData(getUrl());
         JSONObject jsonObject =  new JSONObject(response);
-        log.info(String.valueOf(jsonObject));
         JSONArray jsonArray1 = jsonObject.getJSONArray("data");
-        log.info("==============="+jsonArray1);
-        log.info("==============="+jsonArray1.length());
 
         List<Map<String, String>> userList = new ArrayList<>();
         for (int i=0;i<jsonArray1.length();i++){
@@ -50,13 +46,12 @@ public class UserListImpl implements UserList {
             user.put("avatar",jsonArray1.getJSONObject(i).getString("avatar"));
             userList.add(user);
         }
-        log.info("===list==="+userList);
+
         return userList;
     }
 
     @Override
     public String getUrl() {
-        //return "https://reqres.in/api/users?page="+pageNo;
         String multiUrl = fetchApiUrl.getMultiUserUrl();
         return multiUrl+pageNo;
     }
